@@ -11,32 +11,9 @@ body {
 	float: left;
 }
 
-.cFFFFFF {
-	color: black;
-	background-color: #FFFFFF;
-}
-
-.c181818 {
-	color: white;
-	background-color: #181818;
-}
-
-.c39C5BB {
-	color: white;
-	background-color: #39C5BB;
-}
-
-.cFF9FB7 {
-	color: black;
-	background-color: #FF9FB7;
-}
-
-.cFCC200 {
-	color: black;
-	background-color: #FCC200;
-}
-
 .color-text {
 	margin: auto;
 	font-size: 32px;
+	color: black;
+	text-shadow: white 0px 0px 20px;
 }
