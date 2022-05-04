@@ -3,3 +3,21 @@ body {
 	color: #ffffff;
 	font-family: sans-serif;
 }
+
+a:visited, a:link {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: pink;
+}
+
+a:active {
+  color: #7c5c61;
+}
+
+a {
+	font-size: 40px;
+}
