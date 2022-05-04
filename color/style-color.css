@@ -5,14 +5,36 @@ body {
 }
 
 .palette-block {
-	background-color: #FFFFFF;
 	width: 20%;
 	height: 300px;
 	display: flex;
+	float: left;
 }
 
-.white {
+.cFFFFFF {
 	color: black;
+	background-color: #FFFFFF;
+}
+
+.c181818 {
+	color: white;
+	background-color: #181818;
+}
+
+.c39C5BB {
+	color: white;
+	background-color: #39C5BB;
+}
+
+.
+.cFF9FB7 {
+	color: black;
+	background-color: #FF9FB7;
+}
+
+.cFCC200 {
+	color: black;
+	background-color: #FCC200;
 }
 
 .color-text {
