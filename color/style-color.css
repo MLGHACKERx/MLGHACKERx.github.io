@@ -4,7 +4,18 @@ body {
 	font-family: sans-serif;
 }
 
-.white {
+.palette-block {
 	background-color: #FFFFFF;
 	width: 20%;
+	height: 300px;
+	display: flex;
+}
+
+.white {
+	color: black;
+}
+
+.color-text {
+	margin: auto;
+	font-size: 30px;
 }
