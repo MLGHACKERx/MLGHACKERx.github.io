@@ -9,6 +9,7 @@ body {
 	height: 300px;
 	display: flex;
 	float: left;
+	margin-top: 10px;
 }
 
 .color-text {
