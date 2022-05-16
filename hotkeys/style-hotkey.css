@@ -1,0 +1,20 @@
+body {
+	background-color: #181818;
+	color: #ffffff;
+	font-family: sans-serif;
+}
+
+code {
+	background-color: #303030;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 3px;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+p {
+	font-size: 25px;
+}
