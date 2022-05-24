@@ -41,5 +41,5 @@ input.addEventListener("keypress", function(event) {
 
 function searchGoogle() {
 	inputText = input.value;
-	window.open("https://google.com/search?q=" + inputText);
+	window.open("https://google.com/search?q=" + inputText, "_blank", "noreferrer");
 }
