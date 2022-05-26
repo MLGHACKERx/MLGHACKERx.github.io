@@ -30,16 +30,51 @@ function checkTime(i) {
   return i;
 }
 
-var input = document.getElementById("search");
-
-input.addEventListener("keypress", function(event) {
+var inputGoogle = document.getElementById("google_input");
+inputGoogle.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    document.getElementById("searchGoogle").click();
+    document.getElementById("search_google").click();
   }
 });
 
-function searchGoogle() {
-	inputText = input.value;
-	window.open("https://google.com/search?q=" + inputText);
+var inputDuck = document.getElementById("duck_input");
+inputDuck.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search_duck").click();
+  }
+});
+
+var inputBing = document.getElementById("bing_input");
+inputBing.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search_bing").click();
+  }
+});
+
+var inputEcosia = document.getElementById("ecosia_input");
+inputEcosia.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search_ecosia").click();
+  }
+});
+
+
+function searchSite(site) {
+	if (site == "GOOGLE") {
+		inputText = inputGoogle.value;
+		window.open("https://google.com/search?q=" + inputText, "_blank", "noreferrer");
+	} else if (site == "DUCK") {
+		inputText = inputDuck.value;
+		window.open("https://duckduckgo.com/?q=" + inputText, "_blank", "noreferrer");
+	} else if (site == "BING") {
+		inputText = inputBing.value;
+		window.open("https://www.bing.com/search?q=" + inputText, "_blank", "noreferrer");
+	} else if (site == "ECOSIA") {
+		inputText = inputEcosia.value;
+		window.open("https://www.ecosia.org/search?method=index&q=" + inputText, "_blank", "noreferrer");
+	}
 }

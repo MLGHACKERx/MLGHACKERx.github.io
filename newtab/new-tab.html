@@ -5,10 +5,36 @@
   <body onload="startTime()">
     <h1>New Tab</h1>
     <div id="clock">clock</div>
-    <div id="searchContainer">
-      <input type="text" id="search">
-      <button id="searchGoogle" onclick="searchGoogle()">GOOGLE</button>
+
+<!-- Google Container -->
+    <div id="google_container">
+      <input type="text" id="google_input">
+      <button id="search_google" onclick="searchSite('GOOGLE')">GOOGLE</button>
     </div>
+<!--  -->
+
+<!-- Duck Container -->
+    <div id="duck_container">
+      <input type="text" id="duck_input">
+      <button id="search_duck" onclick="searchSite('DUCK')">DUCKDUCKGO</button>
+    </div>
+<!--  -->
+
+<!-- Bing Container -->
+    <div id="bing_container">
+      <input type="text" id="bing_input">
+      <button id="search_bing" onclick="searchSite('BING')">BING</button>
+    </div>
+<!--  -->
+
+<!-- Ecosia Container -->
+    <div id="ecosia_container">
+      <input type="text" id="ecosia_input">
+      <button id="search_ecosia" onclick="searchSite('ECOSIA')">ECOSIA</button>
+    </div>
+<!--  -->
+
+
   </body>
   <script src="new-tab.js"></script>
   <script src="../hotkeys/hotkeys.js"></script>
