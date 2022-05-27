@@ -1,3 +1,4 @@
+// Clock
 function startTime() {
   const today = new Date();
   let h = today.getHours();
@@ -29,7 +30,9 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
+// End of clock
 
+// Google single search
 var inputGoogle = document.getElementById("google_input");
 inputGoogle.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -38,6 +41,12 @@ inputGoogle.addEventListener("keypress", function(event) {
   }
 });
 
+function searchGoogle() {
+  searchSite("GOOGLE", inputGoogle.value);
+}
+//
+
+// Duck Duck Go single search
 var inputDuck = document.getElementById("duck_input");
 inputDuck.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -46,6 +55,12 @@ inputDuck.addEventListener("keypress", function(event) {
   }
 });
 
+function searchDuck() {
+  searchSite("DUCK", inputDuck.value);
+}
+//
+
+// Bing single search
 var inputBing = document.getElementById("bing_input");
 inputBing.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -54,6 +69,12 @@ inputBing.addEventListener("keypress", function(event) {
   }
 });
 
+function searchBing() {
+  searchSite("BING", inputBing.value);
+}
+//
+
+// Ecosia single search
 var inputEcosia = document.getElementById("ecosia_input");
 inputEcosia.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -62,19 +83,34 @@ inputEcosia.addEventListener("keypress", function(event) {
   }
 });
 
+function searchEcosia() {
+  searchSite("ECOSIA", inputEcosia.value);
+}
+//
 
-function searchSite(site) {
+
+var all_input = document.getElementById("all_input");
+all_input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    forward_to_searchSite();
+  }
+});
+
+function forward_to_searchSite () {
+  var selection_list = document.getElementById("search_engines");
+  var selected_engine = selection_list.options[selection_list.selectedIndex].value;
+  searchSite(selected_engine, all_input.value);
+}
+
+function searchSite(site, inputText) {
 	if (site == "GOOGLE") {
-		inputText = inputGoogle.value;
-		window.open("https://google.com/search?q=" + inputText, "_blank", "noreferrer");
+		window.open("https://google.com/search?q=" + inputText, "_self", "noreferrer");
 	} else if (site == "DUCK") {
-		inputText = inputDuck.value;
-		window.open("https://duckduckgo.com/?q=" + inputText, "_blank", "noreferrer");
+		window.open("https://duckduckgo.com/?q=" + inputText, "_self", "noreferrer");
 	} else if (site == "BING") {
-		inputText = inputBing.value;
-		window.open("https://www.bing.com/search?q=" + inputText, "_blank", "noreferrer");
+		window.open("https://www.bing.com/search?q=" + inputText, "_self", "noreferrer");
 	} else if (site == "ECOSIA") {
-		inputText = inputEcosia.value;
-		window.open("https://www.ecosia.org/search?method=index&q=" + inputText, "_blank", "noreferrer");
+		window.open("https://www.ecosia.org/search?method=index&q=" + inputText, "_self", "noreferrer");
 	}
 }

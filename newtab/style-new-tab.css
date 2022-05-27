@@ -1,0 +1,25 @@
+body {
+	font-family: sans-serif;
+}
+
+.main_searchbox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#individual_container {
+	position: absolute;
+	padding: 10px;
+	left: 0px;
+	bottom: 0px;
+}
+
+#clock {
+	font-size: 25px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 25px;
+}

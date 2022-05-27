@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style-new-tab.css">
   </head>
   <body onload="startTime()">
     <h1>New Tab</h1>
     <div id="clock">clock</div>
 
+
+  <div id="individual_container">
+  <p id="individual_title">Individual Boxes Search</p>
 <!-- Google Container -->
-    <div id="google_container">
+    <div id="google_container" class="individual_search" onClick="this.select();">
       <input type="text" id="google_input">
-      <button id="search_google" onclick="searchSite('GOOGLE')">GOOGLE</button>
+      <button id="search_google" onclick="searchGoogle('GOOGLE')">GOOGLE</button>
     </div>
 <!--  -->
 
 <!-- Duck Container -->
-    <div id="duck_container">
+    <div id="duck_container" class="individual_search" onClick="this.select();">
       <input type="text" id="duck_input">
-      <button id="search_duck" onclick="searchSite('DUCK')">DUCKDUCKGO</button>
+      <button id="search_duck" onclick="searchDuck('DUCK')">DUCKDUCKGO</button>
     </div>
 <!--  -->
 
 <!-- Bing Container -->
-    <div id="bing_container">
+    <div id="bing_container" class="individual_search" onClick="this.select();">
       <input type="text" id="bing_input">
-      <button id="search_bing" onclick="searchSite('BING')">BING</button>
+      <button id="search_bing" onclick="searchBing('BING')">BING</button>
     </div>
 <!--  -->
 
 <!-- Ecosia Container -->
-    <div id="ecosia_container">
-      <input type="text" id="ecosia_input">
-      <button id="search_ecosia" onclick="searchSite('ECOSIA')">ECOSIA</button>
+    <div id="ecosia_container" class="individual_search">
+      <input type="text" id="ecosia_input" onClick="this.select();">
+      <button id="search_ecosia" onclick="searchEcosia('ECOSIA')">ECOSIA</button>
     </div>
+  </div>
 <!--  -->
 
+    <div id="all_container" class="main_searchbox">
+      <select name="search_engines" id="search_engines">
+        <option value="GOOGLE">Google</option>
+        <option value="DUCK">DuckDuckGo</option>
+        <option value="BING">Bing</option>
+        <option value="ECOSIA">Ecosia</option>
+      </select>
+      <input type="text" id="all_input" onClick="this.select();">
+      <button onclick="forward_to_searchSite()">Search</button>
+    </div>
 
   </body>
   <script src="new-tab.js"></script>
